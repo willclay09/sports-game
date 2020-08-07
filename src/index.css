@@ -79,9 +79,20 @@ body {
   align-items: center;
   justify-content: center;
 }
-
+@keyframes spinner {
+  from {
+    transform: rotate(20deg);
+  }
+  to {
+    transform: rotate(190deg);
+  }
+}
 .Team img {
   max-width: 200px;
+  animation-name: spinner;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 .stats {
@@ -89,7 +100,8 @@ body {
   justify-content: space-around;
   align-items: center;
   color: royalblue;
-  text-shadow: 2px 2px 5px black;
+  text-shadow: 2px 2px 5px rgb(219, 216, 18);
+  text-emphasis: bold;
 }
 @keyframes spin {
   from {
@@ -115,6 +127,10 @@ body {
   animation-duration: 20s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
+  transition: color 2s;
+}
+.versus h1:hover {
+  color: red;
 }
 .Arena {
   text-align: center;
